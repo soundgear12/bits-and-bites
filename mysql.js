@@ -14,24 +14,15 @@ db.connect(err => {
     console.log("Connection successful!")
 
     query = "DROP TABLE IF EXISTS BEER"
-    db.query(query, err => {
-        if (err) throw err;
-        console.log("Beer table dropped!")
-    })
+    executeQuery(query, "Beer table dropped!")
 
     query = "CREATE TABLE BEER (id INT PRIMARY KEY, name VARCHAR(255), "
         + "type_id INT, size VARCHAR(255), price INT)"
-    db.query(query, err => {
-        if (err) throw err;
-        console.log("Beer table created!")
-    })
+    executeQuery(query, "Beer table created!")
 
     query = "LOAD DATA LOCAL INFILE 'csv/beer.csv' INTO TABLE BEER FIELDS TERMINATED BY ',' IGNORE 1 LINES"
         + "(id, name, type_id, size, price)"
-    db.query(query, err => {
-        if (err) throw err;
-        console.log("Beer table loaded!")
-    })
+    executeQuery(query, "Beer table loaded!")
 
     db.end(err => {
         if (err) throw err;
@@ -39,3 +30,10 @@ db.connect(err => {
     })
 
 })
+
+function executeQuery(query, msg) {
+    db.query(query, err => {
+        if (err) throw err;
+        console.log(msg)
+    })
+}
