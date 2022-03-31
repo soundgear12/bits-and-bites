@@ -1,38 +1,231 @@
 .App {
+  
+}
+
+.page {
+  background-image: url(./../public/images/background.jpg);
+   min-height: 100%;
+   min-width: 1024px;
+   width: 100%;
+   height: auto;
+   position: fixed;
+   top: 0;
+   left: 0;
+
+}
+
+.title {
+  font-family: Sea_Gardens;
+  color: #F8F8F6;
   text-align: center;
+  font-size: 70px;
+  margin-bottom: -.1%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+hr {
+  border: 0;
+	border-top: 10px solid #C8BCBA;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu {
+  display: block;
+  margin-top: 10%;
+  margin-left: 18%;
+  margin-right: auto;
+  width: 40%;
+  
+}
+/*main menu */
+.row-1 {
+  margin-top: 140px;
+  display: grid;
+  column-count: 3;
+  grid-template-columns: 200px 200px 200px;  
+  column-gap: 5px;
+  margin-bottom: 0px;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.row-2 {
+  margin-left: 103px;
+  display: grid;
+  column-count: 3;
+  grid-template-columns: 200px 200px 200px;  
+  column-gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.row-3 {
+  margin-left: 206px;
+  display: grid;
+  column-count: 3;
+  grid-template-columns: 200px 200px 200px;  
+  column-gap: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell {
+  width: 140px; 
+   height: 140px; 
+   background: #BD9000;
+   margin-left: 140px;
+   outline-style: solid;
+   outline-color: black;
+   outline-width: 4px;
+   margin-top: -37px;
+   font-size: large;
+  
+  
+   /* Rotate */
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   /* Rotate Origin */
+   -webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+   -ms-transform-origin: 0 100%;
+   -o-transform-origin: 0 100%;
+   transform-origin: 0 100%;
+}
+
+.cell:hover {
+  background: #FFC80C;
+  outline-color: #C6CACA;
+  /* transform: scale(1.1); */
+
+  
+}
+
+.cell-text {
+  text-align: center;
+  transform: rotate(45deg);
+  position: relative;
+  left: 0px;
+  top: 10px;
+  margin-right: 0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:28px;
+  font-weight: bold;
+  -webkit-text-stroke: .05px white; 
+}
+
+link {
+  color:black
+}
+
+/*beer menu */
+
+.beer-menu {
+  display: block;
+  margin-top: 30%;
+  margin-left: 15%;
+  margin-right: auto;
+  width: 40%;
+  
+}
+/*main menu */
+.beer-row-1 {
+  margin-top: 140px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  margin-bottom: 10px;
+  
+}
+
+.beer-row-2 {
+  margin-top: -95px;
+  margin-left: 52px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  
+}
+
+.beer-row-3 {
+  margin-top: -85px;
+  margin-left: 104px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  
+}
+
+.beer-row-4 {
+  margin-top: -85px;
+  margin-left: 156px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  
+}
+
+.beer-row-5 {
+  margin-top: -85px;
+  margin-left: 208px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  
+}
+
+.beer-row-6 {
+  margin-top: -85px;
+  margin-left: 260px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  
+}
+
+.beer-row-7 {
+  margin-top: -85px;
+  margin-left: 312px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  
+}
+
+.beer-row-8 {
+  margin-top: -85px;
+  margin-left: 364.5px;
+  display: grid;
+  column-count: 4;
+  grid-template-columns: 105px 105px 105px 105px;  
+  column-gap: 0px;
+  
+}
+
+.beer-cell {
+  width: 70px; 
+   height: 70px; 
+   background: #BD9000;
+   margin-left: 140px;
+   outline-style: solid;
+   outline-color: black;
+   outline-width: 4px;
+   margin-top: -37px;
+   font-size: large;
+  
+  
+   /* Rotate */
+   -webkit-transform: rotate(-45deg);
+   -moz-transform: rotate(-45deg);
+   -ms-transform: rotate(-45deg);
+   -o-transform: rotate(-45deg);
+   transform: rotate(-45deg);
+   /* Rotate Origin */
+   -webkit-transform-origin: 0 100%;
+   -moz-transform-origin: 0 100%;
+   -ms-transform-origin: 0 100%;
+   -o-transform-origin: 0 100%;
+   transform-origin: 0 100%;
 }
